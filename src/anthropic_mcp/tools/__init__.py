@@ -12,10 +12,10 @@ Modules:
 
 from __future__ import annotations
 
-from anthropic.tools.batches import batch_tools
-from anthropic.tools.messages import message_tools
-from anthropic.tools.models import model_tools
-from anthropic.tools.tokens import token_tools
+from anthropic_mcp.tools.batches import batch_tools
+from anthropic_mcp.tools.messages import message_tools
+from anthropic_mcp.tools.models import model_tools
+from anthropic_mcp.tools.tokens import token_tools
 
 anthropic_tools = [
     *model_tools,

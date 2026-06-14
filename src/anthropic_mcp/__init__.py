@@ -9,7 +9,7 @@ Credentials provided by clients at runtime via DAuth token exchange.
 
 from __future__ import annotations
 
-from anthropic.config import create_anthropic_connection
-from anthropic.tools import anthropic_tools
+from anthropic_mcp.config import create_anthropic_connection
+from anthropic_mcp.tools import anthropic_tools
 
 __all__ = ["create_anthropic_connection", "anthropic_tools"]

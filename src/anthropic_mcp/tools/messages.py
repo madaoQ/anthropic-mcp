@@ -10,14 +10,14 @@ from typing import Any
 from dedalus_mcp import HttpMethod, tool
 from dedalus_mcp.types import ToolAnnotations
 
-from anthropic.guards import (
+from anthropic_mcp.guards import (
     validate_max_tokens,
     validate_message_content,
     validate_model,
     validate_temperature,
 )
-from anthropic.request import request
-from anthropic.types import JSONObject
+from anthropic_mcp.request import request
+from anthropic_mcp.types import JSONObject
 
 
 @tool(

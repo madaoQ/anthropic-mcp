@@ -12,7 +12,7 @@ from dotenv import load_dotenv
 from dedalus_mcp import MCPServer
 from dedalus_mcp.server import TransportSecuritySettings
 
-from anthropic import create_anthropic_connection, anthropic_tools
+from anthropic_mcp import create_anthropic_connection, anthropic_tools
 
 load_dotenv()
 

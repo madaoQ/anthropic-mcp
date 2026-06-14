@@ -8,7 +8,7 @@ from __future__ import annotations
 from dedalus_mcp import tool
 from dedalus_mcp.types import ToolAnnotations
 
-from anthropic.types import ModelInfo, ModelList
+from anthropic_mcp.types import ModelInfo, ModelList
 
 
 @tool(

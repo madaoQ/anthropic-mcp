@@ -10,9 +10,9 @@ from typing import Any
 from dedalus_mcp import HttpMethod, tool
 from dedalus_mcp.types import ToolAnnotations
 
-from anthropic.guards import validate_batch_id
-from anthropic.request import request
-from anthropic.types import JSONObject
+from anthropic_mcp.guards import validate_batch_id
+from anthropic_mcp.request import request
+from anthropic_mcp.types import JSONObject
 
 
 @tool(
