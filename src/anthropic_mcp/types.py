@@ -7,19 +7,23 @@ from __future__ import annotations
 
 from typing import Any, Literal
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, ConfigDict, Field
 
 
-class ModelInfo(BaseModel, frozen=True, slots=True):
+class ModelInfo(BaseModel):
     """Anthropic model info."""
+    model_config = _FROZEN_SLOT
+
 
     id: str
     name: str | None = None
     description: str | None = None
 
 
-class MessageResponse(BaseModel, frozen=True, slots=True):
+class MessageResponse(BaseModel):
     """Message API response."""
+    model_config = _FROZEN_SLOT
+
 
     id: str | None = None
     type: str | None = None
@@ -27,15 +31,19 @@ class MessageResponse(BaseModel, frozen=True, slots=True):
     content: list[dict[str, Any]] = Field(default_factory=list)
 
 
-class TokenCount(BaseModel, frozen=True, slots=True):
+class TokenCount(BaseModel):
     """Token count response."""
+    model_config = _FROZEN_SLOT
+
 
     tokens: int | None = None
     model: str | None = None
 
 
-class BatchInfo(BaseModel, frozen=True, slots=True):
+class BatchInfo(BaseModel):
     """Batch job info."""
+    model_config = _FROZEN_SLOT
+
 
     id: str | None = None
     status: str | None = None
