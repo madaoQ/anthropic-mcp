@@ -24,6 +24,15 @@ class ModelInfo(BaseModel):
     description: str | None = None
 
 
+class ModelList(BaseModel):
+    """List of Anthropic models."""
+    model_config = _FROZEN_SLOT
+
+
+    object: str | None = None
+    data: list[ModelInfo] = Field(default_factory=list)
+
+
 class MessageResponse(BaseModel):
     """Message API response."""
     model_config = _FROZEN_SLOT
