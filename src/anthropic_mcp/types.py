@@ -10,6 +10,10 @@ from typing import Any, Literal
 from pydantic import BaseModel, ConfigDict, Field
 
 
+# Reusable config: immutable, slotted.
+_FROZEN_SLOT = ConfigDict(frozen=True, slots=True)
+
+
 class ModelInfo(BaseModel):
     """Anthropic model info."""
     model_config = _FROZEN_SLOT
